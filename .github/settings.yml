@@ -5,3 +5,4 @@ repository:
   description: All data in Snowflake is stored in database tables, logically structured as collections of columns and rows
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
+
