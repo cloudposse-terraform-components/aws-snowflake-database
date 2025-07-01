@@ -30,6 +30,15 @@
 All data in Snowflake is stored in database tables, logically structured as collections of columns and rows. This
 component will create and control a Snowflake database, schema, and set of tables.
 
+## Migrate `chanzuckerberg/snowflake` to `snowflakedb/snowflake` provider
+
+5/25/2022 the provider has been transferred from the Chan Zuckerberg Initiative (CZI) GitHub organization to snowflakedb org.
+To upgrade from CZI, please run the following command:
+
+```shell
+terraform state replace-provider chanzuckerberg/snowflake snowflakedb/snowflake
+```
+
 ## Usage
 
 **Stack Level**: Regional
@@ -74,14 +83,14 @@ components:
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0, < 6.0.0 |
 | <a name="requirement_snowflake"></a> [snowflake](#requirement\_snowflake) | >= 0.25 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0, < 6.0.0 |
 | <a name="provider_snowflake"></a> [snowflake](#provider\_snowflake) | >= 0.25 |
 
 ## Modules
@@ -102,15 +111,15 @@ components:
 
 | Name | Type |
 |------|------|
-| [snowflake_database.this](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/database) | resource |
-| [snowflake_database_grant.grant](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/database_grant) | resource |
-| [snowflake_schema.this](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/schema) | resource |
-| [snowflake_schema_grant.grant](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/schema_grant) | resource |
-| [snowflake_sequence.this](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/sequence) | resource |
-| [snowflake_table.tables](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/table) | resource |
-| [snowflake_table_grant.grant](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/table_grant) | resource |
-| [snowflake_view.view](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/view) | resource |
-| [snowflake_view_grant.grant](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/view_grant) | resource |
+| [snowflake_database.this](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/database) | resource |
+| [snowflake_database_grant.grant](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/database_grant) | resource |
+| [snowflake_schema.this](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/schema) | resource |
+| [snowflake_schema_grant.grant](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/schema_grant) | resource |
+| [snowflake_sequence.this](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/sequence) | resource |
+| [snowflake_table.tables](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/table) | resource |
+| [snowflake_table_grant.grant](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/table_grant) | resource |
+| [snowflake_view.view](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/view) | resource |
+| [snowflake_view_grant.grant](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/view_grant) | resource |
 | [aws_ssm_parameter.snowflake_private_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 | [aws_ssm_parameter.snowflake_username](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 
