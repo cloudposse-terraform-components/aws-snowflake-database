@@ -105,7 +105,7 @@ components:
 | <a name="module_snowflake_schema"></a> [snowflake\_schema](#module\_snowflake\_schema) | cloudposse/label/null | 0.25.0 |
 | <a name="module_snowflake_sequence"></a> [snowflake\_sequence](#module\_snowflake\_sequence) | cloudposse/label/null | 0.25.0 |
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
-| <a name="module_utils"></a> [utils](#module\_utils) | cloudposse/utils/aws | 0.8.1 |
+| <a name="module_utils"></a> [utils](#module\_utils) | cloudposse/utils/aws | 1.4.0 |
 
 ## Resources
 
