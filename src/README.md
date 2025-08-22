@@ -11,6 +11,14 @@ tags:
 All data in Snowflake is stored in database tables, logically structured as collections of columns and rows. This
 component will create and control a Snowflake database, schema, and set of tables.
 
+## Migrate `chanzuckerberg/snowflake` to `snowflakedb/snowflake` provider
+
+5/25/2022 the provider has been transferred from the Chan Zuckerberg Initiative (CZI) GitHub organization to snowflakedb org.
+To upgrade from CZI, please run the following command:
+
+```shell
+terraform state replace-provider chanzuckerberg/snowflake snowflakedb/snowflake
+```
 ## Usage
 
 **Stack Level**: Regional
@@ -49,7 +57,10 @@ components:
 ```
 
 <!-- prettier-ignore-start -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- prettier-ignore-end -->
+
+
+<!-- markdownlint-disable -->
 ## Requirements
 
 | Name | Version |
@@ -131,12 +142,17 @@ components:
 ## Outputs
 
 No outputs.
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
+
+
 
 ## References
 
-- [cloudposse/terraform-aws-components](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/snowflake-database) -
-  Cloud Posse's upstream component
+
+- [cloudposse-terraform-components](https://github.com/orgs/cloudposse-terraform-components/repositories) - Cloud Posse's upstream component
+
+
+
 
 [<img src="https://cloudposse.com/logo-300x69.svg" height="32" align="right"/>](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse-terraform-components/aws-snowflake-database&utm_content=)
+

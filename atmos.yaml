@@ -1,0 +1,14 @@
+# Atmos Configuration — powered by https://atmos.tools
+#
+# This configuration enables centralized, DRY, and consistent project scaffolding using Atmos.
+#
+# Included features:
+# - Organizational custom commands: https://atmos.tools/core-concepts/custom-commands
+# - Automated README generation: https://atmos.tools/cli/commands/docs/generate
+#
+# Import shared configuration used by all modules
+import:
+  # Use local template/config when network access is restricted
+  - .github/atmos/terraform-component.yaml
+  # Upstream shared config (preferred when network is available)
+  - https://raw.githubusercontent.com/cloudposse-terraform-components/.github/refs/heads/main/.github/atmos/terraform-component.yaml
