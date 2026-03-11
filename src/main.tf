@@ -24,7 +24,7 @@ module "snowflake_label" {
   source  = "cloudposse/label/null"
   version = "0.25.0"
 
-  environment      = lookup(module.utils.region_az_alt_code_maps["to_short"], local.snowflake_account_region)
+  environment      = module.utils.region_az_alt_code_maps["to_short"][local.snowflake_account_region]
   delimiter        = "_"
   label_value_case = "upper"
 
